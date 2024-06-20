@@ -81,7 +81,7 @@ posts.forEach(post => {
 
     containerContent += 
     `
-    <div class="post">
+        <div class="post">
             <div class="post__header">
                 <div class="post-meta">                    
                     <div class="post-meta__icon">
@@ -116,14 +116,12 @@ posts.forEach(post => {
     container.innerHTML= containerContent;
 });
 
-
-
-
-
-
-
-
-
-
-
 // Milestone 3 - Se clicchiamo sul tasto “Mi Piace” cambiamo il colore al testo del bottone e incrementiamo il counter dei likes relativo. Salviamo in un secondo array gli id dei post ai quali abbiamo messo il like.
+
+// aggiungo il bottone
+const likeButton = document.querySelector('.js-like-button');
+
+// aggiungo il like counter
+const likeCounter = document.querySelector('.js-likes-counter');
+
+// aggiungo l'add event listener
