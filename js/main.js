@@ -100,7 +100,7 @@ posts.forEach(post => {
             <div class="post__footer">
                 <div class="likes js-likes">
                     <div class="likes__cta">
-                        <a class="like-button  js-like-button" href="#" data-postid="${postID}">
+                        <a class="like-button  js-like-button" href="#" onclick="event.preventDefault()" data-postid="${postID}">
                             <i class="like-button__icon fas fa-thumbs-up" aria-hidden="true"></i>
                             <span class="like-button__label">Mi Piace</span>
                         </a>
@@ -121,7 +121,16 @@ posts.forEach(post => {
 // aggiungo il bottone
 const likeButton = document.querySelector('.js-like-button');
 
+// array per salvare i post a cui abbiamo messo like 
+const likedPosts= [];
+
 // aggiungo il like counter
 const likeCounter = document.querySelector('.js-likes-counter');
 
+
 // aggiungo l'add event listener
+likeButton.addEventListener('click',
+    function(){
+        likeButton.classList.add('like-button--liked')
+    }
+)
